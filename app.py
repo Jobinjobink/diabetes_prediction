@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 
 # Load Model, Scaler, and Feature Names
-model = joblib.load("src/train_data/diabetes_model.pkl")
-scaler = joblib.load("src/train_data/scaler.pkl")
-feature_names = joblib.load("src/train_data/features.pkl")
+model = joblib.load("diabetes_model.pkl")
+scaler = joblib.load("scaler.pkl")
+feature_names = joblib.load("features.pkl")
 
 
 st.title("🩺 Diabetes Prediction Web App")
@@ -27,3 +27,4 @@ if st.button("Predict"):
         st.error("⚠️ High Risk: Patient is likely **Diabetic**")
     else:
         st.success("✅ Patient is **Not Diabetic**")
+
